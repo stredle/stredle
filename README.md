@@ -14,8 +14,8 @@ Stredle is a fork of Litecoin using scrypt as a proof-of-work algorithm.
  - 60 sec block targets
  - subsidy halves in 580k blocks
  - ~75.4 million total coins
- - 10MB Max block size
- - 5MB normal block size
+ - 15MB Max block size
+ - 10MB normal block size
  
  *Port Forwarding*
  TCP: 1253
