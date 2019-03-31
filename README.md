@@ -1,7 +1,7 @@
 Stredle integration/staging tree
 ================================
 
-http://www.stredle.github.io
+https://stredle.github.io/
 
 Copyright (c) 2009-2014 Bitcoin Developers
 Copyright (c) 2011-2018 Litecoin Developers
@@ -28,7 +28,7 @@ The rest is the same as Litecoin.
 
 
 For more information, as well as an immediately useable, binary version of
-the Stredle client sofware, see http://www.stredle.github.io
+the Stredle client sofware, see https://stredle.github.io/
 
 License
 -------
