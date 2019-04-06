@@ -22,7 +22,6 @@ class SendCoinsDialog;
 class SignVerifyMessageDialog;
 class Notificator;
 class RPCConsole;
-class BlockBrowser;
 
 class CWallet;
 
@@ -83,7 +82,6 @@ protected:
 private:
     ClientModel *clientModel;
     WalletFrame *walletFrame;
-	BlockBrowser *blockBrowser;
 
     QLabel *labelEncryptionIcon;
     QLabel *labelConnectionsIcon;
@@ -173,8 +171,6 @@ private slots:
     void gotoOverviewPage();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
-	/** Switch to block browser page */
-    void gotoBlockBrowser();
     /** Switch to address book page */
     void gotoAddressBookPage();
     /** Switch to receive coins page */
