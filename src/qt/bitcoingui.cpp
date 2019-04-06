@@ -17,7 +17,6 @@
 #include "bitcoinunits.h"
 #include "guiconstants.h"
 #include "notificator.h"
-#include "blockbrowser.h"
 #include "guiutil.h"
 #include "rpcconsole.h"
 #include "ui_interface.h"
@@ -97,8 +96,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
 
     // Create status bar
     statusBar();
-	// create tabs
-	blockBrowser = new BlockBrowser(this);
 
     // Status bar notification icons
     QFrame *frameBlocks = new QFrame();
@@ -138,8 +135,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);
     statusBar()->addPermanentWidget(frameBlocks);
-	centralWidget->addWidget(blockBrowser);
-
 
     syncIconMovie = new QMovie(":/movies/update_spinner", "mng", this);
 
@@ -257,8 +252,6 @@ void BitcoinGUI::createActions()
     connect(changePassphraseAction, SIGNAL(triggered()), walletFrame, SLOT(changePassphrase()));
     connect(signMessageAction, SIGNAL(triggered()), this, SLOT(gotoSignMessageTab()));
     connect(verifyMessageAction, SIGNAL(triggered()), this, SLOT(gotoVerifyMessageTab()));
-	connect(blockAction, SIGNAL(triggered()), this, SLOT(gotoBlockBrowser()));
-
 }
 
 void BitcoinGUI::createMenuBar()
@@ -486,14 +479,6 @@ void BitcoinGUI::gotoOverviewPage()
 void BitcoinGUI::gotoHistoryPage()
 {
     if (walletFrame) walletFrame->gotoHistoryPage();
-}
-void BitcoinGUI::gotoBlockBrowser()
-{
-    blockAction->setChecked(true);
-    centralWidget->setCurrentWidget(blockBrowser);
-
-    exportAction->setEnabled(false);
-    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
 void BitcoinGUI::gotoAddressBookPage()
