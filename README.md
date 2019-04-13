@@ -5,7 +5,7 @@ https://stredle.github.io/
 
 Copyright (c) 2009-2014 Bitcoin Developers
 Copyright (c) 2011-2018 Litecoin Developers
-Copyright (c) 2018 Stredle Developers
+Copyright (c) 2019 Stredle Developers
 
 What is Stredle?
 ----------------
@@ -15,7 +15,6 @@ Stredle is a fork of Litecoin using scrypt as a proof-of-work algorithm.
  - subsidy halves in 580k blocks
  - ~75.4 million total coins
  - 15MB Max block size
- - 10MB normal block size
  
  *Port Forwarding*
  TCP: 1253
@@ -64,19 +63,3 @@ Testing and code review is the bottleneck for development; we get more pull
 requests than we can review and test. Please be patient and help out, and
 remember this is a security-critical project where any mistake might cost people
 lots of money.
-
-### Automated Testing
-
-Developers are strongly encouraged to write unit tests for new code, and to
-submit new unit tests for old code.
-
-Unit tests for the core code are in `src/test/`. To compile and run them:
-
-    cd src; make -f makefile.unix test
-
-Unit tests for the GUI code are in `src/qt/test/`. To compile and run them:
-
-    qmake BITCOIN_QT_TEST=1 -o Makefile.test bitcoin-qt.pro
-    make -f Makefile.test
-    ./Stredle-qt_test
-
