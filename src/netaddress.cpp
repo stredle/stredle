@@ -9,10 +9,10 @@
 #include <tinyformat.h>
 
 static const unsigned char pchIPv4[12] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0xff, 0xff };
-static const unsigned char pchOnionCat[] = {0xFD,0x87,0xD8,0x7E,0xEB,0x43};
+static const unsigned char pchOnionCat[] = {0x00,0x41,0xC7,0x6D,0xDA,0x44};
 
-// 0xFD + sha256("stredle")[0:5]
-static const unsigned char g_internal_prefix[] = { 0xFD, 0x6C, 0xE9, 0xFE, 0x45, 0x49 };
+// 0x00 + sha256("stredle")[0:5]
+static const unsigned char g_internal_prefix[] = { 0x00, 0x0F, 0xE2, 0xEF, 0x56, 0x50 };
 
 CNetAddr::CNetAddr()
 {
