@@ -23,13 +23,13 @@ def setup():
         programs += ['lxc', 'debootstrap']
     subprocess.check_call(['sudo', 'apt-get', 'install', '-qq'] + programs)
     if not os.path.isdir('gitian.sigs.ltc'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/stredle-project/gitian.sigs.ltc.git'])
+        subprocess.check_call(['git', 'clone', 'https://github.com/stredle/gitian.sigs.ltc.git'])
     if not os.path.isdir('stredle-detached-sigs'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/stredle-project/stredle-detached-sigs.git'])
+        subprocess.check_call(['git', 'clone', 'https://github.com/stredle/stredle-detached-sigs.git'])
     if not os.path.isdir('gitian-builder'):
         subprocess.check_call(['git', 'clone', 'https://github.com/devrandom/gitian-builder.git'])
     if not os.path.isdir('stredle'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/stredle-project/stredle.git'])
+        subprocess.check_call(['git', 'clone', 'https://github.com/stredle/stredle.git'])
     os.chdir('gitian-builder')
     make_image_prog = ['bin/make-base-vm', '--suite', 'bionic', '--arch', 'amd64']
     if args.docker:
