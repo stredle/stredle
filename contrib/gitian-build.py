@@ -23,7 +23,7 @@ def setup():
         programs += ['lxc', 'debootstrap']
     subprocess.check_call(['sudo', 'apt-get', 'install', '-qq'] + programs)
     if not os.path.isdir('gitian.sigs.ltc'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/stredle/gitian.sigs.ltc'])
+        subprocess.check_call(['git', 'clone', 'https://github.com/stredle/gitian.sigs.ste'])
     if not os.path.isdir('stredle-detached-sigs'):
         subprocess.check_call(['git', 'clone', 'https://github.com/stredle/stredle-detached-sigs'])
     if not os.path.isdir('gitian-builder'):
