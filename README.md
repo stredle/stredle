@@ -1,6 +1,9 @@
 Stredle integration/staging tree
 ================================
 
+WARNING: This source code (Stredle V2) is **NOT** working, here's the last working Stredle source code: https://github.com/stredle/stredle/tree/v0.8.7.5
+
+----------------
 https://stredle.github.io/
 
 Copyright (c) 2009-2014 Bitcoin Developers
