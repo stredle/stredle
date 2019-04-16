@@ -1,7 +1,7 @@
 Stredle integration/staging tree
 ================================
 
-**WARNING**: This version of the source code (Stredle V2) is **NOT** working, here's the last working Stredle source code: https://github.com/stredle/stredle/tree/v0.8.7.5
+**WARNING**: This version of the source code (Stredle V2) is **NOT** working, here's the last working version of the Stredle source code: https://github.com/stredle/stredle/tree/v0.8.7.5
 
 ----------------
 https://stredle.github.io/
